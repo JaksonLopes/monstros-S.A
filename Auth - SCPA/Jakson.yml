@@ -1,0 +1,38 @@
+info:
+  name: "Jakson "
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: "{{host-autenticador}}/oauth/token"
+  headers:
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+    - name: Authorization
+      value: Basic Rk5TREVWT0xVUkVDVVJTT0FQSTpDOEQwQUEyRkZBQjUyNzA0ODc2MzhCOTY2NzE2Mzc5OTcxRkYzMDNCOTA4MkYwNUY4RkE3NkU3RjMxRDM0NkI2OTFCRUVFQUMwM0NGRkUyMzUwRjZGREYxRDJCQUMxQkI=
+  body:
+    type: form-urlencoded
+    data:
+      - name: grant_type
+        value: password
+      - name: username
+        value: "70502177195"
+      - name: password
+        value: Datasus.07
+      - name: scope
+        value: SCPA
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const jsonData = res.getBody();
+        bru.setEnvVar("access_token", jsonData.access_token);
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

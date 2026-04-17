@@ -1,0 +1,7 @@
+info:
+  name: Certificado
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

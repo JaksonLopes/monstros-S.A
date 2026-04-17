@@ -1,0 +1,20 @@
+name: DEV [API-localhost]
+variables:
+  - name: host-autenticador
+    value: https://autorizador-hom.saude.gov.br
+  - name: scpa-client-id
+    value: SIGOSUS
+  - name: scpa-client-secret
+    value: 66E9322B78EE16432B400B3ECE36AF54B485110AF0C4D6450FE06D4E81260169BD3C9C685627F588288919F0F8859D8F
+  - name: host-investsus-backend
+    value: http://localhost:8080/investsus
+  - name: host-parcelamento
+    value: http://localhost:8084/parcelamento
+  - name: host-pmae-par
+    value: http://localhost:8083/pmae
+  - name: host-sigo-sus
+    value: http://localhost:8080
+  - name: host-sigosus-backend
+    value: http://localhost:8080
+  - name: host-sigo-ploa-api
+    value: http://localhost:8083

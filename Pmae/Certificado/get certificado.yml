@@ -1,0 +1,24 @@
+info:
+  name: get certificado
+  type: http
+  seq: 5
+
+http:
+  method: get
+  url: https://fns-documento-digital-api-hom.saude.gov.br/documento-digital/987775/visual
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJDTlNESUdJVEFMIiwiR09WQlIiLCJTQ1BBIl0sIm9yZ2FuaXphdGlvbiI6IkRBVEFTVVMiLCJpc3MiOiJzYXVkZS5nb3YuYnIiLCJleHAiOjE3NzQ5MDY2OTcsImp0aSI6ImViNWU2N2Y0LWM0Y2EtNGNkOS1hZDNmLWIyOGRmZWUzMDM3MSIsImNsaWVudF9pZCI6IkJHU0lDT05WRk5TX0lOVEVHUkFDQU8ifQ.S-4l_FrwljBqqNVaO-Zg_6pt9_0aetAF7qVah9kdm8A
+    - name: Cookie
+      value: BIGipServerhpjMa82A5L/A4wt+pZlUPA=!asBt7LW5/brIa1DDu/Jb2ag4ySb2XSZFdIZREkwmv1/WY9h1tmhBOPNDb068lwrqf+AnxN4f78WdMAk=; TS01895c50=01f6470b2f4b21ab2b3dee5d417876449bc4e781966ea5cc3dde58ea0d1a41382ed36a28ca6c0924daebc1e8830a33230877339414a30a1a4840b8eaf6dad74746741fbbf95bcad234231415f330b95db215dbdabf; fns-documento-digital-api=69C851575F1D13CFBD790AFE69A5BFB3
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

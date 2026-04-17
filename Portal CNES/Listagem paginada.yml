@@ -1,0 +1,40 @@
+info:
+  name: Listagem paginada
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: http://localhost:8088/cnes/public/estabelecimentos/listar
+  headers:
+    - name: accept
+      value: "*/*"
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "filter": {
+          "termoBusca": "HOSPITAL"
+      //     "uf": "DF"
+      //     "municipio": "string",
+      //     "gestao": "F"
+      //     "naturezaJuridica": "ADMINISTRACAO_PUBLICA",
+      //     "atendeSus": false
+        },
+        "pageNumber": 5,
+        "pageSize": 10
+      //   ,
+      //   "sort": {
+      //     "field": "nmFantasia",
+      //     "direction": "ASC"
+      //   }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

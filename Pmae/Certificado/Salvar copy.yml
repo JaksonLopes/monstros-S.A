@@ -1,0 +1,38 @@
+info:
+  name: Salvar copy
+  type: http
+  seq: 9
+
+http:
+  method: post
+  url: "{{host-pmae-par}}/certificados"
+  headers:
+    - name: Cz-Aphrodite-De-Peixes
+      value: DIREME
+    - name: Cz-Milo-De-Escopiao
+      value: ENTPUBLICAFNS
+    - name: Cz-Mu-De-Aries
+      value: 33/330455/16234106000432
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZWxlZm9uZSI6Im51bGwiLCJ1c2VyX25hbWUiOiI3MDUwMjE3NzE5NSIsIm9yaWdlbSI6IlNDUEEiLCJpc3MiOiJzYXVkZS5nb3YuYnIiLCJub21lIjoiSmFrc29uIExvcGVzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9JTlZFU1RTVVNfQ09ERVIiLCJST0xFX0lOVkVTVFNVU19DUE9GIiwiUk9MRV9JTlZFU1RTVVNfVEVDSU5TVFBVQiIsIlJPTEVfQ05FU19BRE1fRkVEIiwiUk9MRV9JTlZFU1RTVVNfQ0dJTiIsIlJPTEVfU0NQQV9HRVMiLCJST0xFX0NORVNfRVNUUyIsIlJPTEVfSU5WRVNUU1VTX0RJUkVNRSIsIlJPTEVfU0NQQSIsIlJPTEVfSU5WRVNUU1VTX0dFU0lOU1RGSU4iLCJST0xFX0lOVkVTVFNVU19MRUlUT1JFTSIsIlJPTEVfU0NQQVNJU1RFTUFfR0VTIiwiUk9MRV9TQ1BBX0FETSIsIlJPTEVfU0NQQVNJU1RFTUFfTUFTVEVSIiwiUk9MRV9TQ1BBX01BU1RFUiIsIlJPTEVfSU5WRVNUU1VTX1BBUkNFTEFERUIiLCJST0xFX1NDUEFfVVNSIiwiUk9MRV9DTkVTIiwiUk9MRV9JTlZFU1RTVVMiLCJST0xFX1NDUEFTSVNURU1BIiwiUk9MRV9TQ1BBU0lTVEVNQV9BRE0iXSwiY2xpZW50X2lkIjoiRk5TREVWT0xVUkVDVVJTT0FQSSIsInNjb3BlIjpbIlNDUEEiXSwiY25lcyI6Im51bGwiLCJvcmdhbml6YXRpb24iOiJEQVRBU1VTIiwiY3BmIjoiNzA1MDIxNzcxOTUiLCJleHAiOjE3NzMxNjg0OTEsImp0aSI6ImM1ODhkNzFmLTg0YWYtNGUzOS1hOGQxLWU1MzEyOTQ0M2YzYSIsImtleSI6IjQwNDkyIiwiZW1haWwiOiJqYWtzb24ubG9wZXNAemVsbG8udGVjLmJyIn0.ppeEbh7DXEfBGOu1QHva22hmk2EwxnRc_6R50mr6mOA
+  body:
+    type: json
+    data: |-
+      {
+        "destinatario": {
+          "codigo": "R",
+          "descricao": "Receita Federal do Brasil (RFB)"
+        },
+        "vlCertificado": 100000
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

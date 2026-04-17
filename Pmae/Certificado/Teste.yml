@@ -1,0 +1,43 @@
+info:
+  name: Teste
+  type: http
+  seq: 7
+
+http:
+  method: put
+  url: https://investsus-backend-hom.saude.gov.br/pmae/propostas/1862/enviar?dirigente=true
+  headers:
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: cz-aphrodite-de-peixes
+      value: DIREP
+    - name: Referer
+      value: https://investsus-hom.saude.gov.br/
+    - name: cz-milo-de-escopiao
+      value: ENTPRIVADAFNS
+    - name: sec-ch-ua
+      value: '"Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: cz-mu-de-aries
+      value: 31/310620/73809352000166
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+    - name: Accept
+      value: application/json, text/plain, /
+    - name: Content-Type
+      value: application/json
+  params:
+    - name: dirigente
+      value: "true"
+      type: query
+  body:
+    type: json
+    data: "{}"
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

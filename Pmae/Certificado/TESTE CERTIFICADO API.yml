@@ -1,0 +1,56 @@
+info:
+  name: TESTE CERTIFICADO API
+  type: http
+  seq: 4
+
+http:
+  method: post
+  url: https://fns-documento-digital-api-hom.saude.gov.br/documento-digital/modelo
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJDTlNESUdJVEFMIiwiR09WQlIiLCJTQ1BBIl0sIm9yZ2FuaXphdGlvbiI6IkRBVEFTVVMiLCJpc3MiOiJzYXVkZS5nb3YuYnIiLCJleHAiOjE3NzQ5MDE2NDgsImp0aSI6IjYxOTY3ZTEyLTkxZTgtNGUzMy05OTQ0LTkxMjBhNWYyYjI4NSIsImNsaWVudF9pZCI6IkJHU0lDT05WRk5TX0lOVEVHUkFDQU8ifQ.Mlby4CASirLtnwxkuP5cZinDOt9rKTASvxu9AVJ1pcc
+    - name: Cookie
+      value: fns-documento-digital-api=CC5C7579E8A20E4FEB04510C48864BA7
+  body:
+    type: json
+    data: |-
+      {
+        "noModeloDocumento": "CERTIFICADO_VALOR_CREDITO_FINANCEIRO",
+        "nuManualDocumento": "345345",
+        "cpfInclusao": "69183155104",
+        "origem": {
+          "idSistema": "INVESTSUS",
+          "numeroAnoExercicio": "2026",
+          "descricaoObservacao": "CVCF RFB",
+          "descricaoPrograma": "Programa Agora Tem Especialista",
+          "nomeFavorecido": "SANTA CASA DE MISERICORDIA DE PORTA ALEGRE",
+          "numeroCnpjProponente": "02926000000168",
+          "vlDocumento": 98891.33
+        },
+        "dados": {
+          "texto": {
+            "tags": {
+              "DT_EMISSAO": "27/03/2026",
+              "NO_DESTINATARIO": "Receita Federal do Brasil – RFB",
+              "NO_ENTIDADE": "SANTA CASA DE MISERICORDIA DE PORTA ALEGRE",
+              "NU_CNPJ": "02.926.000/0001-68",
+              "SF_UF": "RS",
+              "NO_MUNICIPIO": "Porta Alegre",
+              "VL_CREDITO": "98.891,33",
+              "VL_CREDITO_EXTENSO": "noventa e oito mil, oitocentos e noventa e um reais e trinta e três centavos"
+            }
+          },
+          "tabelas": []
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

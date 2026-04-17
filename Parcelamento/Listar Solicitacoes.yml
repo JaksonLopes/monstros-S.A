@@ -1,0 +1,55 @@
+info:
+  name: "Listar Solicitacoes "
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: "{{host-parcelamento}}/solicitacoes/paginado"
+  headers:
+    - name: Cz-Mu-De-Aries
+      value: 53/530010/05816630000152
+    - name: Cz-Milo-De-Escopiao
+      value: ENTPUBLICAFNS
+    - name: Cz-Aphrodite-De-Peixes
+      value: DIREME
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: ••••••
+  body:
+    type: json
+    data: |-
+      {
+        
+        "pageNumber": 1,
+        "pageSize": 10,
+        "sortField": "dtSituacao",
+        "sortType": "ASC"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        // const token = bru.getEnvVar("access_token");
+        // const exp = Number(bru.getEnvVar("token_exp"));
+
+        // if (!token || !exp || Date.now() > (exp - 60000)) {
+
+        //   const resp = await bru.runRequest("Auth | SCPA/POST Jakson");
+
+        //   const data = resp.getBody();
+
+        //   bru.setEnvVar("access_token", data.access_token);
+        //   bru.setEnvVar("token_exp", Date.now() + (data.expires_in * 1000));
+        // }
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

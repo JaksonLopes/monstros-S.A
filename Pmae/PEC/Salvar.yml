@@ -1,0 +1,101 @@
+info:
+  name: Salvar
+  type: http
+  seq: 1
+
+http:
+  method: post
+  url: "{{host-pmae-par}}/pec"
+  headers:
+    - name: Cz-Aphrodite-De-Peixes
+      value: ENTPUBLICAFNS
+    - name: Cz-Milo-De-Escopiao
+      value: ENTPUBLICAFNS
+    - name: Cz-Mu-De-Aries
+      value: 42/261160/80673411000187
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZWxlZm9uZSI6Im51bGwiLCJ1c2VyX25hbWUiOiI3MDUwMjE3NzE5NSIsIm9yaWdlbSI6IlNDUEEiLCJpc3MiOiJzYXVkZS5nb3YuYnIiLCJub21lIjoiSmFrc29uIExvcGVzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9JTlZFU1RTVVNfQ09ERVIiLCJST0xFX0lOVkVTVFNVU19DUE9GIiwiUk9MRV9JTlZFU1RTVVNfVEVDSU5TVFBVQiIsIlJPTEVfQ05FU19BRE1fRkVEIiwiUk9MRV9JTlZFU1RTVVNfQ0dJTiIsIlJPTEVfU0NQQV9HRVMiLCJST0xFX0NORVNfRVNUUyIsIlJPTEVfSU5WRVNUU1VTX0RJUkVNRSIsIlJPTEVfU0NQQSIsIlJPTEVfSU5WRVNUU1VTX0dFU0lOU1RGSU4iLCJST0xFX0lOVkVTVFNVU19MRUlUT1JFTSIsIlJPTEVfU0NQQVNJU1RFTUFfR0VTIiwiUk9MRV9TQ1BBX0FETSIsIlJPTEVfU0NQQVNJU1RFTUFfTUFTVEVSIiwiUk9MRV9TQ1BBX01BU1RFUiIsIlJPTEVfSU5WRVNUU1VTX1BBUkNFTEFERUIiLCJST0xFX1NDUEFfVVNSIiwiUk9MRV9DTkVTIiwiUk9MRV9JTlZFU1RTVVMiLCJST0xFX1NDUEFTSVNURU1BIiwiUk9MRV9TQ1BBU0lTVEVNQV9BRE0iXSwiY2xpZW50X2lkIjoiRk5TREVWT0xVUkVDVVJTT0FQSSIsInNjb3BlIjpbIlNDUEEiXSwiY25lcyI6Im51bGwiLCJvcmdhbml6YXRpb24iOiJEQVRBU1VTIiwiY3BmIjoiNzA1MDIxNzcxOTUiLCJleHAiOjE3NzMxNjg0OTEsImp0aSI6ImM1ODhkNzFmLTg0YWYtNGUzOS1hOGQxLWU1MzEyOTQ0M2YzYSIsImtleSI6IjQwNDkyIiwiZW1haWwiOiJqYWtzb24ubG9wZXNAemVsbG8udGVjLmJyIn0.ppeEbh7DXEfBGOu1QHva22hmk2EwxnRc_6R50mr6mOA
+  body:
+    type: json
+    data: |-
+      {
+        "id": 301,
+        "uf": {
+          "codigo": "",
+          "descricao": ""
+        },
+        "abrangencia": {
+          "codigo": "3",
+          "descricao": "Região de Saúde"
+        },
+        "email": "luiz.kosse@zello.tec.com",
+        "nuTelefone": "70707070707",
+        "macrorregiaoSaude": null,
+        "regioesSaude": [
+          {
+            "codigo": "346",
+            "descricao": "Porto Seguro"
+          }
+        ],
+        "idArquivoCibCir": "pmae-20260122-abf69950-bfa6-48e6-ac15-0afcc507bfa6",
+        "idArquivoFilaEstadual": "pmae-20260122-93ed6d74-3345-4df6-a3ce-b3148482fef6",
+        "procedimentosComComplementacaoFederal": [
+          {
+            "codigo": "0401020010",
+            "descricao": "ENXERTO COMPOSTO",
+            "porcentagemComplementar": 50,
+            "municipios": [
+              "290340"
+            ]
+          },
+          {
+            "codigo": "0401020010",
+            "descricao": "ENXERTO COMPOSTO",
+            "porcentagemComplementar": 10,
+            "municipios": [
+              "291630"
+            ]
+          }
+        ],
+        "saldosProgramados": [
+          {
+            "municipioExecutor": "520005",
+            "nomeEstado": "BAHIA",
+            "tipoSaldoProgramado": {
+              "codigo": "1",
+              "descricao": "Estado"
+            },
+            "listaProcedimentos": [
+              {
+                "codigo": "0404010628",
+                "descricao": "CIRURGIA PARA PRÓTESE AUDITIVA ANCORADA NO OSSO UNILATERAL TEMPO ÚNICO",
+                "quantidade": 10,
+                "vlUnitario": 32743.7
+              },
+              {
+                "codigo": "0402020022",
+                "descricao": "SUPRARRENALECTOMIA UNILATERAL",
+                "quantidade": 1,
+                "vlUnitario": 3626.71
+              },
+              {
+                "codigo": "0401020010",
+                "descricao": "ENXERTO COMPOSTO",
+                "quantidade": 10,
+                "vlUnitario": 1270.71
+              }
+            ]
+          }
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
