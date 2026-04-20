@@ -1,0 +1,14 @@
+opencollection: 1.0.0
+info:
+  name: "squad-monstros"
+  type: workspace
+
+collections:
+  - name: "Projetos"
+    path: "collections/Projetos"
+
+specs:
+
+docs: ''
+
+activeEnvironmentUid: 1rl6kjw00000000000000
